@@ -1,0 +1,32 @@
+#menu{
+    background-color:black;
+    height:100%;
+    width:10%;
+    right:7%;
+    position:relative;
+    transition:width .5s,right .5s;
+}
+
+
+#view{
+    background-color:white;
+    transition:margin-left .5s,left .5s,width .5s;
+    bottom:100%;
+    text-align:right;
+    height:100%;
+    width:193%;
+    left:3%;
+    position:relative;
+    
+}
+
+#cinfo{
+    color:white;
+    font-size:17px;
+    transition:color .5s;
+}
+
+#cinfo:hover{
+    color:green;
+}
+
