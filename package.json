@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://hoblist.com/movieList",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -38,4 +39,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

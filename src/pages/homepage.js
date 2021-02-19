@@ -1,5 +1,5 @@
 import './design/homepage.css'
-import React from 'react';
+import React,{Component} from 'react';
 import Companyinfo from './companyinfo';
 import axios from 'axios';
 
@@ -10,6 +10,7 @@ export default class Homepage extends React.Component{
 
         this.state={
                popup:false,
+               
         };
     }
     handlemouseenter=()=>{
@@ -34,7 +35,8 @@ export default class Homepage extends React.Component{
         this.setState({popup:!this.state.popup});
     }
     butto(){
-        axios.post("https://hoblist.com/movieList?category=movies&language=kannada&genre=all&sort=voting").then(response => console.log(response.data));
+        axios.post(' https://hoblist.com/movieList', 
+            { category: 'movies', language: 'kannada', genre: 'all', sort: 'voting' }).then(response => alert(response.data));
     }
 
     render(){
@@ -47,14 +49,15 @@ export default class Homepage extends React.Component{
                 <a id="cinfo" onClick={()=>{this.handleevent()}}>Company Info</a>
             </div>
             <div id="view">
-                    {
-                        this.state.popup ?
-                            <Companyinfo closepopup={this.togglepopup.bind(this)}/> : null
-                    }
+                    <div Style="right:75%;top:10%;position:relative">
 
-                    <button  Style="right:75%;top:10%;position:relative" onClick={()=>{this.butto()}}>click</button>
+                    <button  Style="" onClick={()=>{this.butto()}}>click</button>
+                    </div>
             </div>
-                
+                {
+                    this.state.popup ?
+                        <Companyinfo closepopup={this.togglepopup.bind(this)} /> : null
+                }
             </body>
         );
     }
