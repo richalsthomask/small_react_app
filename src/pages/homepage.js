@@ -29,11 +29,11 @@ export default class Homepage extends React.Component{
         return jfile.map((value, index) => {
             
             
-            return <div Style="height:40%;width:98%;padding:1%;text-align:center">
+            return <span><div Style="height:40%;width:98%;padding:1%;text-align:center">
                 
                      <div Style="float:left;height:100%;width:10%;">
 
-                    <div Style="background-image:url(download.png);background-size:cover;height:20%;width:39%;left:15%;position:relative;"></div>
+                    <div id="download" Style="background-image:url(download.png);background-size:cover;height:20%;width:39%;left:15%;position:relative;"></div>
 
                     <h3 Style="right:17%;position:relative;font-size:30px">
                         
@@ -41,7 +41,7 @@ export default class Homepage extends React.Component{
                         
                     </h3>
 
-                    <div Style="background-image:url(download1.jpg);background-size:cover;height:20%;width:39%;left:13%;position:relative;">
+                    <div id="download1" Style="background-image:url(download1.jpg);background-size:cover;height:20%;width:39%;left:14%;position:relative;">
 
                     </div>
 
@@ -117,8 +117,8 @@ export default class Homepage extends React.Component{
                      </div>
                   
                 
-                </div>
-            
+                </div><hr Style="margin-left:3%;margin-right:3%;height"/>
+            </span>
         })
         
     }
