@@ -31,6 +31,7 @@ export default class Register extends React.Component{
             localStorage.setItem('phone', this.state.phone);
             localStorage.setItem('password', this.state.password1);
             localStorage.setItem('profession', this.state.profession);
+            alert("account created");
          }
     }
     render(){

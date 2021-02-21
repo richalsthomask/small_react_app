@@ -33,6 +33,7 @@ export default class Login extends React.Component
         else{
             if (localStorage.getItem('name') === this.state.name && localStorage.getItem('password') === this.state.password)
               this.setState({ redirect: true });
+            else alert("username of password is wrong")
         }
       }
     render(){
