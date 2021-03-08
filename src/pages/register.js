@@ -49,10 +49,10 @@ export default class Register extends React.Component{
                 <input type="number" class="r"  placeholder="Enter phone number" onChange={(e) => { this.setState({ phone: e.target.value }) }} />
                 <div />
                 <input type="password" class="r" Style="width:16.5%;background-color:rgba(200,200,200,.5);" placeholder="Enter password" onChange={(e) => { this.setState({ password1: e.target.value }) }} />
-                
+
                 <input type="password" class="r" Style="width:16.5%;background-color:rgba(200,200,200,.5);" placeholder="confirm password" onChange={(e) => { this.setState({ password2: e.target.value }) }} />
                 <div />
-                <select name="Profession" id="rselect" >
+                <select name="Profession" id="rselect" onChange={(e.target.value)=>{this.setState({profession:e.target.value})}} >
                     <option value="profession1">Profession1</option>
                     <option value="profession2">Profession2</option>
                     <option value="profession3">Profession3</option>
@@ -70,4 +70,3 @@ export default class Register extends React.Component{
         );
     }
 }
-
